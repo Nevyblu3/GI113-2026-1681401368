@@ -56,6 +56,28 @@ namespace Lab02
             Console.WriteLine($"Name: {character01Name}");
             Console.WriteLine($"Rank: {elaraRank}");
             Console.WriteLine($"Hp: {elaraHp}");
+            string character02Name = "Arkan";
+            char arkanRank = 'A';
+            int arkanHp = 1680;
+            int arkanPower = 145;
+            int arkanDefense = 175;
+            float arkanSpeed = 60.5f;
+
+            string character03Name = "Lilia";
+            string liliaClass = "Support";
+            int liliaHp = 950;
+            int liliaPower = 10;
+            int liliaMana = 1000;
+            float liliaSpeed = 180.5f;
+
+            string character04Name = "Veyron";
+            int veyronHp = 2200;
+            int veyronPower = 260;
+            int veyronDefense = 150;
+            float veyronSpeed = 100;
+            bool isEnemy = true;
+
+            
         }
 
 
