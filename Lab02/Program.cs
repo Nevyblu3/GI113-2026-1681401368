@@ -7,6 +7,8 @@
  */
 
 
+using System.Xml.Linq;
+
 namespace Lab02
 {
     internal class Program
@@ -42,8 +44,21 @@ namespace Lab02
             Console.WriteLine($"HP : {currentHp} / {maxHp}");
             hpPercent = currentHp * 100 / maxHp;
             Console.WriteLine($"HP Percent:{hpPercent}%");
+
+            string character01Name = "Elara";
+            char elaraRank = 'S';
+            int elaraHp = 820;
+            int elaraPower = 185;
+            float elaraSpeed = 90.5f;
+            double elara1Critrate = 20.75;
+
+            Console.WriteLine("===== CHARACTERS STATUS: INITAL =====");
+            Console.WriteLine($"Name: {character01Name}");
+            Console.WriteLine($"Rank: {elaraRank}");
+            Console.WriteLine($"Hp: {elaraHp}");
         }
-       
+
+
     }
     
 }
