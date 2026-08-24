@@ -52,10 +52,6 @@ namespace Lab02
             float elaraSpeed = 90.5f;
             double elara1Critrate = 20.75;
 
-            Console.WriteLine("===== CHARACTERS STATUS: INITAL =====");
-            Console.WriteLine($"Name: {character01Name}");
-            Console.WriteLine($"Rank: {elaraRank}");
-            Console.WriteLine($"Hp: {elaraHp}");
             string character02Name = "Arkan";
             char arkanRank = 'A';
             int arkanHp = 1680;
@@ -77,7 +73,39 @@ namespace Lab02
             float veyronSpeed = 100;
             bool isEnemy = true;
 
-            
+            Console.WriteLine("===== CHARACTERS STATUS: Elara =====");
+            Console.WriteLine($"Name: {character01Name}");
+            Console.WriteLine($"Rank: {elaraRank}");
+            Console.WriteLine($"Hp: {elaraHp}");
+            Console.WriteLine($"Magic Power: {elaraPower}");
+            Console.WriteLine($"Speed: {elaraSpeed}");
+            Console.WriteLine($"Crit Rate: {elara1Critrate}");
+            Console.WriteLine();
+
+            Console.WriteLine("===== CHARACTERS STATUS: Arkan =====");
+            Console.WriteLine($"Name: {character02Name}");
+            Console.WriteLine($"Rank: {arkanRank}");
+            Console.WriteLine($"Hp: {arkanHp}");
+            Console.WriteLine($"Attack Power: {arkanPower}");
+            Console.WriteLine($"Defense Power: {arkanDefense}");
+            Console.WriteLine($"Speed: {arkanSpeed}");
+            Console.WriteLine();
+
+            Console.WriteLine("===== CHARACTERS Lilia =====");
+            Console.WriteLine($"Name: {character03Name}");
+            Console.WriteLine($"Hp: {liliaHp}");
+            Console.WriteLine($"Magic Power: {liliaPower}");
+            Console.WriteLine($"Mana: {liliaMana}");
+            Console.WriteLine($"Speed: {liliaSpeed}");
+            Console.WriteLine($"Class: {liliaClass}");
+            Console.WriteLine();
+
+            Console.WriteLine("===== CHARACTERS Veyron =====");
+            Console.WriteLine($"Hp: {veyronHp}");
+            Console.WriteLine($"Attack Power: {veyronPower}");
+            Console.WriteLine($"Defense Power: {veyronDefense}");
+            Console.WriteLine($"Speed: {veyronSpeed}");
+            Console.WriteLine($"Is Enemy : {isEnemy}");
         }
 
 
