@@ -91,7 +91,7 @@ namespace Lab02
             Console.WriteLine($"Speed: {arkanSpeed}");
             Console.WriteLine();
 
-            Console.WriteLine("===== CHARACTERS Lilia =====");
+            Console.WriteLine("===== CHARACTERS: Lilia =====");
             Console.WriteLine($"Name: {character03Name}");
             Console.WriteLine($"Hp: {liliaHp}");
             Console.WriteLine($"Magic Power: {liliaPower}");
@@ -100,7 +100,7 @@ namespace Lab02
             Console.WriteLine($"Class: {liliaClass}");
             Console.WriteLine();
 
-            Console.WriteLine("===== CHARACTERS Veyron =====");
+            Console.WriteLine("===== CHARACTERS: Veyron =====");
             Console.WriteLine($"Hp: {veyronHp}");
             Console.WriteLine($"Attack Power: {veyronPower}");
             Console.WriteLine($"Defense Power: {veyronDefense}");
