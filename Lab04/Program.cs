@@ -33,6 +33,7 @@ namespace Lab04
             Console.Write("Starting luck (0.0 - 10.0):");
             bool luckValid = double.TryParse(Console.ReadLine(), out double luck);
             Console.WriteLine($">>{characterName} the Class {classNumber} adventurer enters the dungeon. Luck : {luck}!");
+            Console.WriteLine();
 
             Console.WriteLine("+________________________+");
             Console.WriteLine("|        ITEM SHOP       |");
@@ -41,14 +42,16 @@ namespace Lab04
             bool quantityValid = int.TryParse(Console.ReadLine(), out int quantity);
             Console.WriteLine($">>Valid input:{quantityValid}");
             Console.WriteLine($">>Quantity:{quantity}");
+            Console.WriteLine();
 
             Console.WriteLine("+________________________+");
             Console.WriteLine("|       SET VOLUME       |");
             Console.WriteLine("+________________________+");
-            Console.Write("Set volume (0.0 - 1.0):");
+            Console.Write("Set volume (0.0 - 1.0): ");
             bool volumeValid = double.TryParse(Console.ReadLine(), out double volume);
             Console.WriteLine($">>Valid input:{volumeValid}");
             Console.WriteLine($">>Volume set to: {volume}");
+            Console.WriteLine();
 
             Console.WriteLine("+________________________+");
             Console.WriteLine("|      NEW SAVE FILE     |");
@@ -57,7 +60,7 @@ namespace Lab04
             string saveName = Console.ReadLine();
             Console.Write("Choose save slot (1-3): ");
             bool saveSlotValid = int.TryParse(Console.ReadLine(), out int saveSlot);
-            Console.WriteLine($">>Save name: {saveName}\n>>Valid input:{saveSlotValid}\n>>Save slot: {saveSlot}");
+            Console.WriteLine($">>Save name: {saveName}\n>>Valid input: {saveSlotValid}\n>>Save slot: {saveSlot}");
 
         }
     }
