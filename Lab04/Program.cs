@@ -50,6 +50,15 @@ namespace Lab04
             Console.WriteLine($">>Valid input:{volumeValid}");
             Console.WriteLine($">>Volume set to: {volume}");
 
+            Console.WriteLine("+________________________+");
+            Console.WriteLine("|      NEW SAVE FILE     |");
+            Console.WriteLine("+________________________+");
+            Console.Write("Enter save name: ");
+            string saveName = Console.ReadLine();
+            Console.Write("Choose save slot (1-3): ");
+            bool saveSlotValid = int.TryParse(Console.ReadLine(), out int saveSlot);
+            Console.WriteLine($">>Save name: {saveName}\n>>Valid input:{saveSlotValid}\n>>Save slot: {saveSlot}");
+
         }
     }
 }
