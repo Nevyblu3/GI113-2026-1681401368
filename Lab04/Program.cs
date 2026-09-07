@@ -42,6 +42,14 @@ namespace Lab04
             Console.WriteLine($">>Valid input:{quantityValid}");
             Console.WriteLine($">>Quantity:{quantity}");
 
+            Console.WriteLine("+________________________+");
+            Console.WriteLine("|       SET VOLUME       |");
+            Console.WriteLine("+________________________+");
+            Console.Write("Set volume (0.0 - 1.0):");
+            bool volumeValid = double.TryParse(Console.ReadLine(), out double volume);
+            Console.WriteLine($">>Valid input:{volumeValid}");
+            Console.WriteLine($">>Volume set to: {volume}");
+
         }
     }
 }
