@@ -29,10 +29,19 @@ namespace Lab04
             Console.Write("Name your character:");
             string characterName = Console.ReadLine();
             Console.Write("Choose a class (1-3):");
-            bool classValid = int.TryParse(Console.ReadLine(), out int classNumber);
+            bool classValid = int.TryParse(Console.ReadLine(), out int classNumber); // tryparse to chech the input 
             Console.Write("Starting luck (0.0 - 10.0):");
             bool luckValid = double.TryParse(Console.ReadLine(), out double luck);
             Console.WriteLine($">>{characterName} the Class {classNumber} adventurer enters the dungeon. Luck : {luck}!");
+
+            Console.WriteLine("+________________________+");
+            Console.WriteLine("|        ITEM SHOP       |");
+            Console.WriteLine("+________________________+");
+            Console.Write("How many potions?  ");
+            bool quantityValid = int.TryParse(Console.ReadLine(), out int quantity);
+            Console.WriteLine($">>Valid input:{quantityValid}");
+            Console.WriteLine($">>Quantity:{quantity}");
+
         }
     }
 }
