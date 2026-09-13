@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Student ID : 1681401368
+ * Name       : Phatnari Mangthes
+ * Section    : 129A
+ * No.        :
+ * Course     : GI113 Computer Programming (GI)
+ */
+
+using System;
 
 namespace Assignment01
 {
@@ -14,7 +22,7 @@ namespace Assignment01
             var characterName = "Phainon";
             var characterTier = 'S';
             const string CharacterElement = "Physical";
-            const string CharacterPaths = "Destruction";
+            string characterPaths = "Destruction";
             int characterHp = 3684;
             int characterAtk = 2785;
             int characterDef = 1574;
@@ -23,20 +31,20 @@ namespace Assignment01
             double critRate = 38.7;
             bool isPlayable = true;
 
-            float characterAtkAsFloat = characterAtk;
-            int critRateTruncated = (int)critRate;
-            int critRateRounnded = Convert.ToInt32(critRate);
+            float characterAtkAsFloat = characterAtk; // เปลี่ยนค่า characterAtk จาก int เป็น float 
+            int critRateTruncated = (int)critRate; // เปลี่ยนค่า critRate จาก double เป็น int ทำให้ค่าทศนิยมถูกตัดออกไป
+            int critRateRounnded = Convert.ToInt32(critRate); // เปลี่ยนค่า critRate จาก double เป็น int ทำให้ค่าทศนิยมถูกปัดขึ้นหรือลงตามค่าที่ใกล้ที่สุด
 
             gameTitle = "                         __              _          \r\n |_|  _  ._  |   _. o   (_ _|_  _. ._   |_)  _. o | \r\n | | (_) | | |< (_| |   __) |_ (_| |    | \\ (_| | | \r\n                                                    ";
             Console.WriteLine($"{gameTitle}");
 
             Console.WriteLine($"+-------------------------------------+");
             Console.WriteLine($"| ＣＨＡＲＡＣＴＥＲ   ＤＥＴＡＩＬＳ |");
-            Console.WriteLine($"+-------------------------------------+");
+            Console.WriteLine($"|-------------------------------------|");
             Console.WriteLine($"| ▸ 𝙽𝚊𝚖𝚎 : {characterName}                    |");
             Console.WriteLine($"| ▸ 𝚃𝚒𝚎𝚛 : {characterTier}                          |");
             Console.WriteLine($"| ▸ 𝙴𝚕𝚎𝚖𝚎𝚗𝚝 : {CharacterElement}                |");
-            Console.WriteLine($"| ▸ 𝙿𝚊𝚝𝚑𝚜 : {CharacterPaths}               |");
+            Console.WriteLine($"| ▸ 𝙿𝚊𝚝𝚑𝚜 : {characterPaths}               |");
             Console.WriteLine($"| ▸ 𝙷𝙿 : {characterHp}                         |");
             Console.WriteLine($"| ▸ 𝙰𝚃𝙺 : {characterAtk}                        |");
             Console.WriteLine($"| ▸ 𝙳𝙴𝙵 : {characterDef}                        |");
