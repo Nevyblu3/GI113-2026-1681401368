@@ -1,4 +1,12 @@
-﻿namespace Lab05
+﻿/*
+ * Student ID : 1681401368
+ * Name       : Phatnari Mangthes
+ * Section    : 129A
+ * No.        :
+ * Course     : GI113 Computer Programming (GI)
+ */
+
+namespace Lab05
 {
     internal class Program
     {
