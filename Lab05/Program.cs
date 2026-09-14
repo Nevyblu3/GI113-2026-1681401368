@@ -30,38 +30,61 @@
             Console.WriteLine($"Stats Valid: Hero={allHeroValid}");
             Console.WriteLine($"Stats Valid: Monster={allMonValid}");
 
-            Console.WriteLine($"[Hero] HP:{heroHp} ATK:{heroAtk} DEF:{heroDef}");
-            Console.WriteLine($"[Monster] HP:{monHp} ATK:{monAtk} DEF:{monDef}");
+            // Display hero and monster stats
+            Console.WriteLine($"\n>>[Hero] HP:{heroHp} ATK:{heroAtk} DEF:{heroDef}");
+            Console.WriteLine($">>[Monster] HP:{monHp} ATK:{monAtk} DEF:{monDef}");
 
-          
+            int monsterMaxHp = monHp;
+
             // before battle : Hero drink potion (compound assignment)
-            int potionHeal = 10;
+            int potionHeal = 8;
             //  แบบที่ 1 
             // heroHp = heroHp + potionHeal;
             //  แบบที่ 2
             heroHp += potionHeal;
-            Console.WriteLine($"\nHero drinks potion, healing {potionHeal} HP. Health is now {heroHp}");
+            Console.WriteLine($"\n>>[Hero drinks potion], healing {potionHeal} HP. Health is now {heroHp}");
 
-            // Calculate damage norlmal attack (Arithmetic + Math.Max)
+            // Damage preview 1: Calculate normal attack (Arithmetic + Math.Max)
             int normalDamage = Math.Max(0, heroAtk - monDef);
-            Console.WriteLine($"\nNormal Damage dealt: {normalDamage} DMG");
+            Console.WriteLine($"\nNormal Attack would deal:: {normalDamage} DMG");
 
-            // Calculate power attack (Predence)
+            // Damage preview 2: Calculate power attack (Predence)
             int powerDamage = Math.Max(0, heroAtk * 2 - monDef); // ตามลำกับ * มาก่อน
-            Console.WriteLine($"Power Attack deal: {powerDamage} DMG"); 
+            Console.WriteLine($"Power Attack would deal: {powerDamage} DMG"); 
 
-            // Calculate Monster Attack
+            // Damage preview 3: Calculate Monster Attack back
             int counterDamage = Math.Max(0, monAtk - heroDef);
-            Console.WriteLine($"Monster Counter Attack deal: {counterDamage} DMG");
+            Console.WriteLine($"Monster Counter afterward would deal: {counterDamage} DMG");
 
             // Calculate Critical Chance (Random)
-            Random rng = new Random();
+            Random rng = new Random(14);
             int roll = rng.Next(1, 101); // Generate a random number between 1 and 100
-            bool isCritical = roll <= 20; // 20% chance for critical hit
-            int critDamage = normalDamage + Convert.ToInt32(isCritical) * normalDamage; // โอกาส 20% ที่จะทำให้เกิด critical damage เลขได้ 1 ไม่ติด ได้ 0 ติด
-            Console.WriteLine($"\nCritical Hit roll : {roll}% , Critical : {isCritical}");
-            Console.WriteLine($"Normal Attack would deal {critDamage} DMG");
+            bool isCritical = roll <= 50; // 50% chance for critical hit
+            int critDamage = normalDamage + Convert.ToInt32(isCritical) * normalDamage; // โอกาส 50% ที่จะทำให้เกิด critical damage เลขได้ 1 ไม่ติด ได้ 0 ติด
+            Console.WriteLine($"\nCritical Hit roll : {roll}, Critical : {isCritical}");
+            Console.WriteLine($"If critical,Normal Attack would deal {critDamage} DMG");
 
+            // สรุปรายงานสอดแนม (comparison + logical operators)
+            bool heroHitsHarder = heroAtk > monAtk;
+            bool canOneShotWithNormal = normalDamage >= monHp;
+            bool monsterCanOneShotHero = counterDamage >= heroHp;
+            bool safeTrade = normalDamage > counterDamage && !monsterCanOneShotHero;
+            bool luckyOrLethal = isCritical || canOneShotWithNormal;
+            Console.WriteLine($"Hero hits harder than Monster: {heroHitsHarder}");
+            Console.WriteLine($"Normal Attack can defeat Monster in one hit: {canOneShotWithNormal}");
+            Console.WriteLine($"Monster could defeat Hero in one hit back: {monsterCanOneShotHero}");
+            Console.WriteLine($"This is a safe trade for Hero: {safeTrade}");
+            Console.WriteLine($"This attack is lucky or lethal: {luckyOrLethal}");
+
+            // Hero commits to the Normal Attack (compound assignment: -=)
+            monHp -= normalDamage;
+            Console.WriteLine($"\n>>[Hero attacks]! Monster HP: {monHp}/{monsterMaxHp}");
+
+            // Result + reward
+            bool monsterDefeated = monHp <= 0;
+            int goldEarned = (monsterMaxHp - monHp) * 2;
+            Console.WriteLine($"\n>>[Monster defeated] : {monsterDefeated}");
+            Console.WriteLine($">>[Gold earned] : {goldEarned}");
 
         }
     }
