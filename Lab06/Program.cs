@@ -93,7 +93,34 @@ namespace Lab06
             Console.WriteLine("Action 2 : DEFEND");
             Console.WriteLine("Action 3 : HEAL\n");
 
-            
+            Console.Write("Choose your action(1-3): ");
+            bool inputValid = int.TryParse(Console.ReadLine(), out int choice);
+
+            if (!inputValid || choice < 1 || choice > 3)
+            {
+                Console.WriteLine("Invalid input, Please choose between 1-3");
+            }
+
+            if (choice == 1) // ATTACK
+            {
+                monsterHp -= heroAtk;
+                Console.WriteLine($"You attacked the monster! \n >> Monster HP: {monsterHp}");
+            }
+            else if (choice == 2) // DEFEND
+            {
+                monsterAtk -= heroDef;
+                heroHp -= monsterAtk;
+                Console.WriteLine($"You defended against the monster's attack! \n >> Monster attack you {monsterAtk} damage! \n >> Hero HP: {heroHp}");
+            }
+            else if (choice == 3) // HEAL
+            {
+                heroHp += potionHeal;
+                Console.WriteLine($"You healed yourself! \n >> Hero HP: {heroHp}");
+            }
+            else
+            {
+                Console.WriteLine("TIME OUT! you ran out of time.");
+            }
         }
          
     }
