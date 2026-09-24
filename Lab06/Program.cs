@@ -1,4 +1,12 @@
-﻿using System.Runtime.CompilerServices;
+﻿/*
+ * Student ID : 1681401368
+ * Name       : Phatnari Mangthes
+ * Section    : 129A
+ * No.        :
+ * Course     : GI113 Computer Programming (GI)
+ */
+
+using System.Runtime.CompilerServices;
 
 namespace Lab06
 {
@@ -108,9 +116,13 @@ namespace Lab06
             }
             else if (choice == 2) // DEFEND
             {
-                monsterAtk -= heroDef;
-                heroHp -= monsterAtk;
-                Console.WriteLine($"You defended against the monster's attack! \n >> Monster attack you {monsterAtk} damage! \n >> Hero HP: {heroHp}");
+                int damageTaken = monsterAtk - heroDef;
+                if (damageTaken < 0)
+                {
+                    damageTaken = 0; //กันไม่ให้ติดลบ
+                }
+                heroHp -= damageTaken;
+                Console.WriteLine($"You defended against the monster's attack! \n >> Monster attacked you {damageTaken} damage! \n >> Hero HP: {heroHp}");
             }
             else if (choice == 3) // HEAL
             {
