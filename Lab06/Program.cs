@@ -71,6 +71,30 @@ namespace Lab06
             //price = 100;
             //int bagSlots = 0;
 
+            int heroHp = 75;
+            int heroAtk = 35;
+            int heroDef = 20;
+            int monsterHp = 40;
+            int monsterAtk = 30;
+            int potionHeal = 10;
+
+            Console.WriteLine("====>> Adventure of Brian <<====\n");
+
+            Console.WriteLine("+________________________+");
+            Console.WriteLine("|     Current Status     |");
+            Console.WriteLine($"| Hero HP: {heroHp}            |");
+            Console.WriteLine($"| Hero ATK: {heroAtk}           |");
+            Console.WriteLine($"| Hero DEF: {heroDef}           |");
+            Console.WriteLine("+________________________+\n");
+
+            Console.WriteLine("==== Monsters Encounter 1 ====");
+
+            Console.WriteLine("Action 1 : ATTACK");
+            Console.WriteLine("Action 2 : DEFEND");
+            Console.WriteLine("Action 3 : HEAL\n");
+
+            
         }
+         
     }
 }
