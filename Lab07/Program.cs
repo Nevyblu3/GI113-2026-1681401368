@@ -2,7 +2,7 @@
  * Student ID : 1681401368
  * Name       : Phatnari Mangthes
  * Section    : 129A
- * No.        :
+ * No.        : 9
  * Course     : GI113 Computer Programming (GI)
  */
 
@@ -12,39 +12,39 @@ namespace Lab07
     {
         static void Main(string[] args)
         {
+            //int level = 5;
+
+            //switch (level)
+            //{
+            //    case 10:
+            //        Console.WriteLine("Unlocked sword");
+            //        break;
+            //    case 5:
+            //        Console.WriteLine("Unlocked stick");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalid level");
+            //        break;
+
+            //}
 
             // PART 1 
 
             //Step 1: ตั้งค่าการต่อสู้
-            int level = 5;
-
-            switch (level)
-            {
-                case 10:
-                    Console.WriteLine("Unlocked sword");
-                    break;
-                case 5:
-                    Console.WriteLine("Unlocked stick");
-                    break;
-                default:
-                    Console.WriteLine("Invalid level");
-                    break;
-
-            }
-
-            //Step 2: เมนูและ switch statement
-            const int MonsterHp = 12;
+            const int MonsterHp = 10;
 
             Console.Write("Monster Defense : ");
             int.TryParse(Console.ReadLine(), out int monsterDefense);
             Console.WriteLine($"A Slime appears! HP {MonsterHp}, DEF {monsterDefense}");
 
+            //Step 2: เมนูและ switch statement
             Console.WriteLine("=== BATTLE MENU ===");
             Console.WriteLine("1) Attack");
             Console.WriteLine("2) Fire Magic");
             Console.WriteLine("3) Defend");
             Console.WriteLine("4) Run");
-            Console.Write("Choose (1-4): ");
+            Console.WriteLine("5) Ultimate Attack"); // Part 2 - 1
+            Console.Write("Choose (1-5): ");
             int.TryParse(Console.ReadLine(), out int command);
 
             switch (command)
@@ -61,6 +61,9 @@ namespace Lab07
                 case 4:
                     Console.WriteLine("Hero looks for a way out...");
                     break;
+                case 5: // Part 2 - 2
+                    Console.WriteLine("Hero uses ultimate attack!");
+                    break;
                 default:
                     Console.WriteLine("Hero hesitates. Invalid command!");
                     break;
@@ -71,6 +74,7 @@ namespace Lab07
             {
                 1 => 12,
                 2 => 18,
+                5 => 25,  // Part 2 - 3
                 _ => 0
             };
             int damage = Math.Max(0, power - monsterDefense);
