@@ -28,6 +28,11 @@ namespace Assignment02
             Console.WriteLine("🔥 - Key [S] for Smelt    (Ore -> Ingot)");
             Console.WriteLine("🔨 - Key [B] for Salvage  (Ingot -> Ore)\n");
 
+            Console.Write(" => Select menu: ");
+            bool inputValid = char.TryParse(Console.ReadLine(), out char menu);
+
+            Console.Write(" => How much would you like (1-200): ");
+            bool amountValid = double.TryParse(Console.ReadLine(), out double amount);
         }
     }
 }
