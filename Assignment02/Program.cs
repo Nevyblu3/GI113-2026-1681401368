@@ -12,7 +12,22 @@ namespace Assignment02
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            const string Material = "Crystal";
+            const double SmeltRate = 0.3;
+            const double SalvageRate = 0.5;
+            const int MaxBatch = 200;
+
+            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine("|         Welcome to the Forge          |");
+            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine($" ▶︎ 💎 {Material} ");
+            Console.WriteLine($"Smelting Rate : {SmeltRate} / Salvage Rate : {SalvageRate}\n");
+            Console.WriteLine(" ▶︎ Menu ");
+            Console.WriteLine("🔥 - Key [S] for Smelt    (Ore -> Ingot)");
+            Console.WriteLine("🔨 - Key [B] for Salvage  (Ingot -> Ore)\n");
+
         }
     }
 }
